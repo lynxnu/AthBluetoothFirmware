@@ -1,29 +1,31 @@
-/* add your code here */
-
 #include <IOKit/usb/IOUSBHostDevice.h>
 #include <IOKit/usb/IOUSBHostInterface.h>
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
 #include <IOKit/usb/USB.h>
+#pragma clang diagnostic pop
 
 #include "AtherosFWService.hpp"
 
 #define ATH3K_DNLOAD                0x01
-#define ATH3K_GETSTATE                0x05
-#define ATH3K_SET_NORMAL_MODE            0x07
+#define ATH3K_GETSTATE              0x05
+#define ATH3K_SET_NORMAL_MODE       0x07
 #define ATH3K_GETVERSION            0x09
-#define USB_REG_SWITCH_VID_PID            0x0a
+#define USB_REG_SWITCH_VID_PID      0x0a
 
-#define ATH3K_MODE_MASK                0x3F
-#define ATH3K_NORMAL_MODE            0x0E
+#define ATH3K_MODE_MASK             0x3F
+#define ATH3K_NORMAL_MODE           0x0E
 
-#define ATH3K_PATCH_UPDATE            0x80
-#define ATH3K_SYSCFG_UPDATE            0x40
+#define ATH3K_PATCH_UPDATE          0x80
+#define ATH3K_SYSCFG_UPDATE         0x40
 
-#define FW_HDR_SIZE        20
-#define BULK_SIZE           4096
-#define ATH3K_XTAL_FREQ_26M            0x00
-#define ATH3K_XTAL_FREQ_40M            0x01
-#define ATH3K_XTAL_FREQ_19P2            0x02
-#define ATH3K_NAME_LEN                0xFF
+#define FW_HDR_SIZE                 20
+#define BULK_SIZE                   4096
+#define ATH3K_XTAL_FREQ_26M         0x00
+#define ATH3K_XTAL_FREQ_40M         0x01
+#define ATH3K_XTAL_FREQ_19P2        0x02
+#define ATH3K_NAME_LEN              0xFF
 
 struct ath3k_version {
     __le32    rom_version;

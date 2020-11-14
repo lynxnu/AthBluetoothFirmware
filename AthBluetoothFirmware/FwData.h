@@ -14,7 +14,7 @@
 struct FwDesc {
     const char *name;
     const unsigned char *var;
-    const long int size;
+    const unsigned int size;
 };
 
 #define IWL_FW(fw_name, fw_var, fw_size) \

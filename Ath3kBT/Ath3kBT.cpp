@@ -1,7 +1,11 @@
 #include <IOKit/IOLib.h>
 #include <IOKit/IOMessage.h>
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
 #include <IOKit/usb/IOUSBHostDevice.h>
 #include <IOKit/usb/IOUSBHostInterface.h>
+#pragma clang diagnostic pop
 
 #include "Ath3kBT.hpp"
 #include "FwData.h"
